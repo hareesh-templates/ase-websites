@@ -1,0 +1,9 @@
+[17-Jun-2023 11:47:19 Europe/Amsterdam] PHP Warning:  Undefined variable $userName in /home/eswarigr/public_html/interiors/admin/blogAdmin/index.php on line 54
+[17-Jun-2023 11:47:43 Europe/Amsterdam] PHP Warning:  Undefined variable $userName in /home/eswarigr/public_html/interiors/admin/blogAdmin/index.php on line 54
+[31-Jul-2023 11:55:03 Europe/Berlin] PHP Warning:  Undefined array key "blogAdminPanel" in /home/eswarigr/public_html/interiors/admin/blogAdmin/addNewBlog.php on line 7
+[29-Aug-2023 14:14:40 Europe/Berlin] PHP Warning:  Undefined array key "blogAdminPanel" in /home/eswarigr/public_html/interiors/admin/blogAdmin/index.php on line 7
+[29-Aug-2023 14:15:15 Europe/Berlin] PHP Warning:  Undefined array key "blogAdminPanel" in /home/eswarigr/public_html/interiors/admin/blogAdmin/index.php on line 7
+[12-Sep-2023 14:45:56 Europe/Berlin] PHP Warning:  Undefined array key "blogAdminPanel" in /home/eswarigr/public_html/interiors/adminpanel/blogAdmin/addNewBlog.php on line 7
+[12-Sep-2023 14:45:58 Europe/Berlin] PHP Warning:  Undefined array key "blogAdminPanel" in /home/eswarigr/public_html/interiors/adminpanel/blogAdmin/index.php on line 7
+[26-Sep-2023 17:29:19 Europe/Berlin] PHP Warning:  Undefined array key "blogAdminPanel" in /home/eswarigr/public_html/interiors/adminpanel/blogAdmin/index.php on line 7
+[04-Oct-2023 07:57:14 Europe/Berlin] PHP Warning:  Undefined array key "blogAdminPanel" in /home/eswarigr/public_html/interiors/adminpanel/blogAdmin/index.php on line 7

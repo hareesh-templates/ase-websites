@@ -1,0 +1,67 @@
+[20-Apr-2023 08:16:14 Europe/Amsterdam] PHP Warning:  Undefined variable $name in /home/eswarigr/public_html/interiors/php/newsletter.php on line 17
+[20-Apr-2023 08:16:14 Europe/Amsterdam] PHP Warning:  Undefined variable $email in /home/eswarigr/public_html/interiors/php/newsletter.php on line 17
+[20-Apr-2023 08:16:14 Europe/Amsterdam] PHP Warning:  Undefined variable $name in /home/eswarigr/public_html/interiors/php/newsletter.php on line 18
+[20-Apr-2023 08:16:14 Europe/Amsterdam] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null in /home/eswarigr/public_html/interiors/php/newsletter.php:19
+Stack trace:
+#0 /home/eswarigr/public_html/interiors/php/newsletter.php(19): PDOStatement->execute()
+#1 {main}
+  thrown in /home/eswarigr/public_html/interiors/php/newsletter.php on line 19
+[21-Apr-2023 01:47:10 Europe/Amsterdam] PHP Warning:  Undefined variable $name in /home/eswarigr/public_html/interiors/php/contact_form.php on line 20
+[21-Apr-2023 01:47:10 Europe/Amsterdam] PHP Warning:  Undefined variable $mobile in /home/eswarigr/public_html/interiors/php/contact_form.php on line 20
+[21-Apr-2023 01:47:10 Europe/Amsterdam] PHP Warning:  Undefined variable $email in /home/eswarigr/public_html/interiors/php/contact_form.php on line 20
+[21-Apr-2023 01:47:10 Europe/Amsterdam] PHP Warning:  Undefined variable $message in /home/eswarigr/public_html/interiors/php/contact_form.php on line 20
+[21-Apr-2023 01:47:10 Europe/Amsterdam] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null in /home/eswarigr/public_html/interiors/php/contact_form.php:22
+Stack trace:
+#0 /home/eswarigr/public_html/interiors/php/contact_form.php(22): PDOStatement->execute()
+#1 {main}
+  thrown in /home/eswarigr/public_html/interiors/php/contact_form.php on line 22
+[02-Jun-2023 23:37:31 Europe/Amsterdam] PHP Warning:  Undefined variable $name in /home/eswarigr/public_html/interiors/php/newsletter.php on line 17
+[02-Jun-2023 23:37:31 Europe/Amsterdam] PHP Warning:  Undefined variable $email in /home/eswarigr/public_html/interiors/php/newsletter.php on line 17
+[02-Jun-2023 23:37:31 Europe/Amsterdam] PHP Warning:  Undefined variable $name in /home/eswarigr/public_html/interiors/php/newsletter.php on line 18
+[02-Jun-2023 23:37:31 Europe/Amsterdam] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null in /home/eswarigr/public_html/interiors/php/newsletter.php:19
+Stack trace:
+#0 /home/eswarigr/public_html/interiors/php/newsletter.php(19): PDOStatement->execute()
+#1 {main}
+  thrown in /home/eswarigr/public_html/interiors/php/newsletter.php on line 19
+[13-Jun-2023 22:49:17 Europe/Amsterdam] PHP Warning:  Undefined variable $name in /home/eswarigr/public_html/interiors/php/newsletter.php on line 17
+[13-Jun-2023 22:49:17 Europe/Amsterdam] PHP Warning:  Undefined variable $email in /home/eswarigr/public_html/interiors/php/newsletter.php on line 17
+[13-Jun-2023 22:49:17 Europe/Amsterdam] PHP Warning:  Undefined variable $name in /home/eswarigr/public_html/interiors/php/newsletter.php on line 18
+[13-Jun-2023 22:49:17 Europe/Amsterdam] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null in /home/eswarigr/public_html/interiors/php/newsletter.php:19
+Stack trace:
+#0 /home/eswarigr/public_html/interiors/php/newsletter.php(19): PDOStatement->execute()
+#1 {main}
+  thrown in /home/eswarigr/public_html/interiors/php/newsletter.php on line 19
+[16-Jun-2023 20:53:32 Europe/Amsterdam] PHP Warning:  Undefined variable $name in /home/eswarigr/public_html/interiors/php/contact_form.php on line 20
+[16-Jun-2023 20:53:32 Europe/Amsterdam] PHP Warning:  Undefined variable $mobile in /home/eswarigr/public_html/interiors/php/contact_form.php on line 20
+[16-Jun-2023 20:53:32 Europe/Amsterdam] PHP Warning:  Undefined variable $email in /home/eswarigr/public_html/interiors/php/contact_form.php on line 20
+[16-Jun-2023 20:53:32 Europe/Amsterdam] PHP Warning:  Undefined variable $message in /home/eswarigr/public_html/interiors/php/contact_form.php on line 20
+[16-Jun-2023 20:53:32 Europe/Amsterdam] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null in /home/eswarigr/public_html/interiors/php/contact_form.php:22
+Stack trace:
+#0 /home/eswarigr/public_html/interiors/php/contact_form.php(22): PDOStatement->execute()
+#1 {main}
+  thrown in /home/eswarigr/public_html/interiors/php/contact_form.php on line 22
+[17-Aug-2023 02:45:27 Europe/Berlin] PHP Warning:  Undefined variable $name in /home/eswarigr/public_html/interiors/php/newsletter.php on line 17
+[17-Aug-2023 02:45:27 Europe/Berlin] PHP Warning:  Undefined variable $email in /home/eswarigr/public_html/interiors/php/newsletter.php on line 17
+[17-Aug-2023 02:45:27 Europe/Berlin] PHP Warning:  Undefined variable $name in /home/eswarigr/public_html/interiors/php/newsletter.php on line 18
+[17-Aug-2023 02:45:27 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null in /home/eswarigr/public_html/interiors/php/newsletter.php:19
+Stack trace:
+#0 /home/eswarigr/public_html/interiors/php/newsletter.php(19): PDOStatement->execute()
+#1 {main}
+  thrown in /home/eswarigr/public_html/interiors/php/newsletter.php on line 19
+[11-Sep-2023 02:51:24 Europe/Berlin] PHP Warning:  Undefined variable $name in /home/eswarigr/public_html/interiors/php/newsletter.php on line 17
+[11-Sep-2023 02:51:24 Europe/Berlin] PHP Warning:  Undefined variable $email in /home/eswarigr/public_html/interiors/php/newsletter.php on line 17
+[11-Sep-2023 02:51:24 Europe/Berlin] PHP Warning:  Undefined variable $name in /home/eswarigr/public_html/interiors/php/newsletter.php on line 18
+[11-Sep-2023 02:51:24 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null in /home/eswarigr/public_html/interiors/php/newsletter.php:19
+Stack trace:
+#0 /home/eswarigr/public_html/interiors/php/newsletter.php(19): PDOStatement->execute()
+#1 {main}
+  thrown in /home/eswarigr/public_html/interiors/php/newsletter.php on line 19
+[11-Sep-2023 03:31:02 Europe/Berlin] PHP Warning:  Undefined variable $name in /home/eswarigr/public_html/interiors/php/contact_form.php on line 20
+[11-Sep-2023 03:31:02 Europe/Berlin] PHP Warning:  Undefined variable $mobile in /home/eswarigr/public_html/interiors/php/contact_form.php on line 20
+[11-Sep-2023 03:31:02 Europe/Berlin] PHP Warning:  Undefined variable $email in /home/eswarigr/public_html/interiors/php/contact_form.php on line 20
+[11-Sep-2023 03:31:02 Europe/Berlin] PHP Warning:  Undefined variable $message in /home/eswarigr/public_html/interiors/php/contact_form.php on line 20
+[11-Sep-2023 03:31:02 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null in /home/eswarigr/public_html/interiors/php/contact_form.php:22
+Stack trace:
+#0 /home/eswarigr/public_html/interiors/php/contact_form.php(22): PDOStatement->execute()
+#1 {main}
+  thrown in /home/eswarigr/public_html/interiors/php/contact_form.php on line 22
