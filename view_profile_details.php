@@ -1,0 +1,312 @@
+
+<?php include 'header2.php'; ?>
+<style type="text/css">
+  .badge-danger{
+    background-color: #fff;
+    color: #00cccd!important;
+    border: 0px;
+  }
+  .badge-warning{
+    background-color: #fff;
+    color: #ffab2d!important;
+    border: 0px;
+  }
+  .badge-info{
+    background-color: #fff;
+    color: #198ae3!important;
+    border: 0px;
+  }
+  .badge-success{
+     background-color: #fff;
+    color: #00cccd!important;
+    border: 0px;
+  }
+</style>
+ 
+  <?php
+	if(isset($_SESSION['valid'])) {			
+		include("connection.php");					
+	?>
+  <?php
+$profile_id = $_GET['profile_id'];
+
+$result = mysqli_query($mysqli, "SELECT login.* FROM login where id = ".$profile_id." ORDER BY id DESC");
+while($res = mysqli_fetch_array($result))
+{
+  $name = $res['name'];
+  $email = $res['email'];
+  $username = $res['username'];
+  $phonenumber = $res['phonenumber'];
+  $adharnumber = $res['adharnumber'];
+  $pannumber = $res['pannumber'];
+  $company = $res['company'];
+  $designation = $res['designation'];
+  $anternate_number = $res['anternate_number'];
+  $present_address = $res['present_address'];
+  $permanent_address = $res['permanent_address'];
+  $joining_date = $res['joining_date'];
+  $branch = $res['branch'];
+  $about_previous_company = $res['about_previous_company'];
+  $bank_account_number = $res['bank_account_number'];
+  $ifsc = $res['ifsc'];
+  $bank_holder_name = $res['bank_holder_name'];
+  $adhar_image = $res['adhar_image'];
+  $pan_image = $res['pan_image'];
+  $status = $res['status'];
+  $ofc_email = $res['ofc_email'];
+  $dob = $res['dob'];
+}
+
+?>
+	<div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title">Employee Profile</h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+               <?php if($_SESSION['role'] == 'superadmin'){ ?> <li class="breadcrumb-item"><a href="edit_profile_details2.php?profile_id=<?php echo $profile_id; ?>">Edit Designation</a></li><?php } ?> 
+                </ol>
+              </nav>
+            </div>
+            <div class="row">
+              
+              <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <td>Name</td>
+                             <td>
+                              <label class="badge badge-danger"> <?php echo $name ?></label>
+                            </td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                          <tr>
+                            <td>Email</td>
+                            <td>
+                              <label class="badge badge-warning"><?php echo $email ?></label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Username</td>
+                            <td>
+                              <label class="badge badge-info"><?php echo $username ?></label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Phone</td>
+                            <td>
+                              <label class="badge badge-success"><?php echo $phonenumber?></label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Alternate Number</td>
+                            <td>
+                              <label class="badge badge-success"><?php echo $anternate_number ?></label>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+               <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <thead>
+                           <tr>
+                            <td>Adhar Number</td>
+                            <td>
+                              <label class="badge badge-warning"><?php echo $adharnumber ?></label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>PAN Number</td>
+                             <td>
+                              <label class="badge badge-danger"> <?php echo $pannumber ?></label>
+                            </td>
+                          </tr>
+                           <tr>
+                            <td>DOB(yyyy-mm-dd)</td>
+                            <td>
+                              <label class="badge badge-info"><?php echo $dob ?></label>
+                            </td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                        
+                         
+                        
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+               <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        
+                        <tbody>
+                            <tr>
+                            <td>Company</td>
+                            <td>
+                              <label class="badge badge-warning"> <?php echo $company; ?></label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Designation</td>
+                            <td>
+                              <label class="badge badge-info"><?php echo $designation ?></label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Joining date</td>
+                            <td>
+                              <label class="badge badge-warning"><?php echo $joining_date ?></label>
+                            </td>
+                          </tr>
+                         
+                          <tr>
+                            <td>Office Email</td>
+                            <td>
+                              <label class="badge badge-success"><?php echo $ofc_email ?></label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Branch</td>
+                            <td>
+                              <label class="badge badge-warning"> <?php echo $branch ?></label>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+               <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <td>About Previous Company</td>
+                             <td>
+                              <label class="badge badge-danger"> <?php echo $about_previous_company ?></label>
+                            </td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                          <tr>
+                            <td>Bank Account Number</td>
+                            <td>
+                              <label class="badge badge-warning"><?php echo $bank_account_number ?></label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>IFSC</td>
+                            <td>
+                              <label class="badge badge-info"><?php echo $ifsc ?></label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Bank Holder Name</td>
+                            <td>
+                              <label class="badge badge-success"><?php echo $bank_holder_name ?></label>
+                            </td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                               
+                  <div class="card-body">
+                     <h4 class="card-title">Adhar image</h4>
+                    <img src="images/adhar/<?php echo $adhar_image ?>" height='250px' width='300px'>
+                    
+                  </div>
+                </div>
+              </div>
+               <div class="col-lg-6 grid-margin stretch-card">
+               
+                <div class="card">
+                  <div class="card-body">
+                     <h4 class="card-title">PAN image</h4>
+
+                    <img src="images/pan/<?php echo $pan_image ?>" height='250px' width='300px'>
+                    
+                  </div>
+                </div>
+              </div>
+              
+             
+            </div>
+
+              <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <td>Permanent Address</td>
+                             <td>
+                              <label class="badge badge-danger"> <?php echo $permanent_address ?></label>
+                            </td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                           <tr>
+                            <td>Present Address</td>
+                            <td>
+                              <label class="badge badge-warning"><?php echo $present_address ?></label>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>	
+		<p style="color: #fff;">Welcome <?php echo $_SESSION['name'] ?> </p>
+		<br/>
+		
+	<?php	
+	} else {
+		header('Location: login.php');
+	}
+	?>
+
+	
+	<?php include 'footer2.php'; ?>
+
