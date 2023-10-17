@@ -1,0 +1,41 @@
+
+---Downloaded files---
+The import files for: Buildbench Default were successfully downloaded!
+Initial max execution time = 300
+Files info:
+Site URL = https://asetechnologies.in/test
+Data file = /home/eswarigr/asetechnologies.in/test/wp-content/uploads/2022/09/demo-content-import-file_2022-09-14__09-53-30.xml
+Widget file = /home/eswarigr/asetechnologies.in/test/wp-content/uploads/2022/09/demo-widgets-import-file_2022-09-14__09-53-30.json
+Customizer file = /home/eswarigr/asetechnologies.in/test/wp-content/uploads/2022/09/demo-customizer-import-file_2022-09-14__09-53-30.dat
+Redux files:
+not defined!
+
+------
+New AJAX call!
+
+
+---Importing widgets---
+Blog widget area : 
+
+Search - No Title - Imported
+Buildbench recent post - Popular Posts - Imported
+Categories - No Title - Imported
+Archives - No Title - Imported
+Tag Cloud - No Title - Imported
+
+Footer Left : 
+
+Image - No Title - Imported
+Text - No Title - Imported
+
+Footer Center : 
+
+Navigation Menu - About Company - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---ocdi/after_import---
+
