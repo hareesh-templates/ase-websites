@@ -1,0 +1,9 @@
+[14-Jun-2023 16:24:19 Europe/Amsterdam] PHP Warning:  Undefined variable $name in /home/eswarigr/parimisdentalcare.com/backend/contact_form.php on line 23
+[14-Jun-2023 16:24:19 Europe/Amsterdam] PHP Warning:  Undefined variable $mobile in /home/eswarigr/parimisdentalcare.com/backend/contact_form.php on line 23
+[14-Jun-2023 16:24:19 Europe/Amsterdam] PHP Warning:  Undefined variable $email in /home/eswarigr/parimisdentalcare.com/backend/contact_form.php on line 23
+[14-Jun-2023 16:24:19 Europe/Amsterdam] PHP Warning:  Undefined variable $message in /home/eswarigr/parimisdentalcare.com/backend/contact_form.php on line 23
+[14-Jun-2023 16:24:19 Europe/Amsterdam] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null in /home/eswarigr/parimisdentalcare.com/backend/contact_form.php:25
+Stack trace:
+#0 /home/eswarigr/parimisdentalcare.com/backend/contact_form.php(25): PDOStatement->execute()
+#1 {main}
+  thrown in /home/eswarigr/parimisdentalcare.com/backend/contact_form.php on line 25

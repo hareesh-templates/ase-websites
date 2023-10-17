@@ -1,0 +1,4 @@
+[04-Apr-2023 06:59:02 Europe/Amsterdam] PHP Warning:  move_uploaded_file(../images/blogIMgs/about1.jpeg): Failed to open stream: No such file or directory in /home/eswarigr/parimisdentalcare.com/adminPanel/php/addBlog.php on line 25
+[04-Apr-2023 06:59:02 Europe/Amsterdam] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpX5386w&quot; to &quot;../images/blogIMgs/about1.jpeg&quot; in /home/eswarigr/parimisdentalcare.com/adminPanel/php/addBlog.php on line 25
+[04-Apr-2023 07:38:53 Europe/Amsterdam] PHP Warning:  move_uploaded_file(../images/blogIMgs/about1.jpeg): Failed to open stream: No such file or directory in /home/eswarigr/parimisdentalcare.com/adminPanel/php/addBlog.php on line 25
+[04-Apr-2023 07:38:53 Europe/Amsterdam] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpoQgMEe&quot; to &quot;../images/blogIMgs/about1.jpeg&quot; in /home/eswarigr/parimisdentalcare.com/adminPanel/php/addBlog.php on line 25

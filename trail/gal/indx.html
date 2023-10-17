@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #folders {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .folder {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        .folder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .folder-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .folder:hover .folder-name {
+            opacity: 1;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="folders">
+        <div class="folder">
+            <img src="../../assets/images/blog/b1.jpg" alt="Folder 1">
+            <div class="folder-name">Folder 1</div>
+        </div>
+        <div class="folder">
+            <img src="../../assets/images/icon/001.png" alt="Folder 2">
+            <div class="folder-name">Folder 2</div>
+        </div>
+        <div class="folder">
+            <img src="../../assets/images/logo/parimi_logo.jpeg" alt="Folder 3">
+            <div class="folder-name">Folder 3</div>
+        </div>
+        <!-- Add more folders here -->
+    </div>
+    <script>
+        const folders = document.querySelectorAll('.folder');
+
+        folders.forEach(folder => {
+            const folderName = folder.querySelector('.folder-name').textContent;
+
+            folder.addEventListener('click', () => {
+                // Redirect to the page with all the photos in the folder
+                window.location.href = `photos.php?folder=${folderName}`;
+            });
+        });
+
+    </script>
+</body>
+
+</html>
