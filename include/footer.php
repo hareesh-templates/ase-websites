@@ -24,8 +24,8 @@ $social_links = $social_links1->fetch(PDO::FETCH_ASSOC); ?>
                             <div class="footer-column col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="footer-widget about-widget">
                                     <div class="text">
-                                         <h2 class="widget-title">Departments</h2>
-                                        <p><?php echo $result['footer_context'];?></p>
+                                         <!-- <h2 class="widget-title">Departments</h2> -->
+                                        <!-- <p><?php // echo $result['footer_context'];?></p> -->
                                     </div>
                                     <ul class="social-icon-three">
                                         <li><a href="<?php echo $social_links['facebook'];?>" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
@@ -56,27 +56,27 @@ $social_links = $social_links1->fetch(PDO::FETCH_ASSOC); ?>
 
                     <!--Big Column-->
                     <div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
-                        <div class="row">
+                        <div class="row" style="justify-content: center">
                             <!--Footer Column-->
-                            <div class="footer-column col-lg-6 col-md-6 col-sm-12">
-                                <!--Footer Column-->
-                                <div class="footer-widget">
+                            <!-- <div class="footer-column col-lg-6 col-md-6 col-sm-12"> -->
+                                <!-- Footer Column -->
+                                <!-- <div class="footer-widget">
                                     <h2 class="widget-title">Services</h2>
                                     <ul class="user-links">
                                         <?php 
                                         
-                                        $services1 = $conn->query("SELECT * FROM services");
-                                        while($services= $services1->fetch(PDO::FETCH_ASSOC)){ ?>
-                                        <li><a href="service-details/<?php echo $services['p_link'];?>"><?php echo $services['title'];?></a></li>
-                                        <!-- <li><a href="#">Restorative Dentistry</a></li>
+                                        // $services1 = $conn->query("SELECT * FROM services");
+                                        // while($services= $services1->fetch(PDO::FETCH_ASSOC)){ ?>
+                                        <li><a href="service-details/<?php // echo $services['p_link'];?>"><?php // echo $services['title'];?></a></li>
+                                        <li><a href="#">Restorative Dentistry</a></li>
                                         <li><a href="#">Root Canal Treatments</a></li>
                                         <li><a href="#">Crowns and Bridges</a></li>
                                         <li><a href="#">Orthodontic Treatments</a></li>
-                                        <li><a href="#">Surgical Dentistry</a></li>-->
-                                    <?php } ?>
+                                        <li><a href="#">Surgical Dentistry</a></li>
+                                    <?php // } ?>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!--Footer Column-->
                             <div class="footer-column col-lg-6 col-md-6 col-sm-12">
