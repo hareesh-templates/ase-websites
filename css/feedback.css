@@ -1,0 +1,56 @@
+
+html {
+    height: 100%;
+  }
+  body {
+    background: url("../imgs/sliderImage3.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .rating {
+    display: inline-block;
+    direction: rtl;
+  }
+
+  .rating input {
+    display: none;
+  }
+
+  .rating label {
+    /* margin: 5px; */
+    font-size: 50px;
+    cursor: pointer;
+    color: #a9a9a9;
+  }
+
+  .rating label:before {
+    content: "\2605";
+  }
+
+  .rating input:checked ~ label:before {
+    content: "\2605";
+    color: #e56332;
+  }
+
+  .rating label:hover:before {
+    content: "\2605";
+  }
+  
+  .rating-box .stars {    
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  /* .stars i {
+    color: #a9a9a9;
+    font-size: 35px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .stars i.active {
+    color: #e56332;
+  } */
