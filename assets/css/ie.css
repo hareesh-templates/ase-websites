@@ -1,0 +1,21 @@
+/*behavior: url(PIE.htc);*/
+
+.search, .search button {
+	behavior: url(PIE.htc);
+}
+.search button {
+ *height:28px;
+}
+.benfitsNo {
+	behavior: url(PIE.htc);
+}
+.homePage header {
+	position: absolute\9 !important;
+}
+.master-slider {
+	margin-top: 0\9 !important;
+}
+.overview {
+	behavior: url(PIE.htc);
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/inner/banner.jpg', sizingMethod='scale');
+}
