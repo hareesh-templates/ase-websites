@@ -12,7 +12,7 @@
                         <div class="content-box">
                             <div class="icon-box"><span class="icon flaticon-dental-insurance"></span></div>
                             <h1><?php echo $home_banners['title']; ?></h1>
-
+                            <!-- <img src="uploads/1613714792_Screenshot_20210219-003830_Google My Business.jpg" alt=""> -->
                             <div class="text"><?php echo $home_banners['description']; ?> </div>
                             <div class="btn-box"><a href="appointment" class="theme-btn btn-style-one bg-scarlet"><span class="btn-title">Book Appointment</span></a></div>
                         </div>

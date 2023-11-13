@@ -23,7 +23,7 @@
                             <div class="basic-details">
                                 <div class="row clearfix">
                                     <div class="image-column col-md-6 col-sm-12">
-                                        <figure class="image-box"><a href="uploads/<?php echo $service['image']; ?>" class="lightbox-image" title="Image Caption Here"><img src="images/service1.jpg" alt=""></a></figure>
+                                        <figure class="image-box"><a href="uploads/<?php echo $service['image']; ?>" class="lightbox-image" title="Image Caption Here"><img src="uploads/<?php echo $service['image']; ?>" alt=""></a></figure>
                                     </div>
                                     <div class="info-column col-md-6 col-sm-12">
                                         <div class="details-header">

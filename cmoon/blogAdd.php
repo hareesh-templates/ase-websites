@@ -3,7 +3,7 @@ if ($_GET['id'] != '') {
 
   $id = $_GET['id'];
 
-  $sql = $conn->query("SELECT * FROM facilities where id='$id' ");
+  $sql = $conn->query("SELECT * FROM blog where id='$id' ");
 
   $result = $sql->fetch(PDO::FETCH_ASSOC);
 }
@@ -16,13 +16,13 @@ if ($_GET['id'] != '') {
         <div class="card">
           <div class="card-header">
             <div style="padding-bottom: 20px;">
-              <a href="facilities_view.php">
+              <a href="blogView.php">
                 <button style="float: right;" class="btn btn-dark" type="button">
                   <span class="far fa-arrow-alt-circle-left "> </span>
                   Back
                 </button>
               </a>
-              Add Or Edit Facilities
+              Add blog
             </div>
 
           </div>
@@ -72,13 +72,11 @@ if ($_GET['id'] != '') {
                 </div>
               </div>
 
-
-
               <div class="form-group row">
                 <label class="col-md-2 col-form-label">Context</label>
                 <div class="col-md-9">
-                  <textarea rows="5" class="ckeditor" id="description" name="description" placeholder="description">
-                    <?php echo $result['description'] ?>
+                  <textarea rows="5" class="ckeditor" id="content" name="content" placeholder="content">
+                    <?php echo $result['content'] ?>
                   </textarea>
                 </div>
               </div>
@@ -113,19 +111,19 @@ if ($_GET['id'] != '') {
       $time_stamp = time();
       $image = $_FILES['image']['name'];
       $image = $time_stamp . '_' . $image;
-      $target_dir = "../uploads/";
+      $target_dir = "../uploads/blog/";
       $target_file = $target_dir . basename($_FILES["image"]["name"]);
       $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
       $extensions_arr = array("jpg", "jpeg", "png", "gif");
-      $location = '../uploads/' . $image;
+      $location = '../uploads/blog/' . $image;
 
       if (in_array($imageFileType, $extensions_arr)) {
-        move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/' . $image);
+        move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/blog/' . $image);
       }
     } else { ?>
-      <script type="text/javascript">
-        window.location.href = "facilities_add.php?msg=imgerror";
-      </script>
+      <!-- <script type="text/javascript">
+        window.location.href = "blogAdd.php?msg=imgerror";
+      </script> -->
     <?php }
 
     foreach ($_POST as $key => $value) {
@@ -134,17 +132,22 @@ if ($_GET['id'] != '') {
     extract($_POST);
 
     $string = str_replace(" ", "-", $title); // Replaces all spaces with hyphens.
+    $key_url = $string;
     $string = preg_replace('/[^A-Za-z0-9 \-]/', '-', $string); // Removes special chars.
     $p_link1 = preg_replace('/-+/', '-', $string); // Replaces multiple hyphens with single one.
     $p_link = $p_link1 . '-' . rand(1, 9999);
-    $stmt1 = $conn->prepare("INSERT INTO facilities (title,image, description) VALUES (:title,:image,:description)");
+    $stmt1 = $conn->prepare("INSERT INTO blog (title, description, keywords, key_url, content, image) VALUES (:title, :description, :keywords, :key_url, :content, :image)");
+    var_dump($stmt1);
     $stmt1->bindParam(':title', $title);
-    $stmt1->bindParam(':image', $image);
     $stmt1->bindParam(':description', $description);
+    $stmt1->bindParam(':keywords', $keywords);
+    $stmt1->bindParam(':key_url', $key_url);
+    $stmt1->bindParam(':content', $content);
+    $stmt1->bindParam(':image', $image);
 
     if ($stmt1->execute()) { ?>
       <script type="text/javascript">
-        window.location.href = "facilities_view.php?msg=success";
+        window.location.href = "blogView.php?msg=success";
       </script>
       <?php   }
   } else {
@@ -176,22 +179,22 @@ if ($_GET['id'] != '') {
       $string = preg_replace('/[^A-Za-z0-9 \-]/', '-', $string); // Removes special chars.
       $p_link1 = preg_replace('/-+/', '-', $string); // Replaces multiple hyphens with single one.
       $p_link = $p_link1 . '-' . rand(1, 9999);
-      $stmt1 = $conn->prepare("UPDATE facilities SET title=:title,image = :image,description=:description WHERE id = :id ");
-      $stmt1->bindParam(':title', $title);
-      $stmt1->bindParam(':image', $image);
-      $stmt1->bindParam(':description', $description);
-      $stmt1->bindParam(':id', $id);
+      $stmt2 = $conn->prepare("UPDATE blog SET title=:title,image = :image,description=:description WHERE id = :id ");
+      $stmt2->bindParam(':title', $title);
+      $stmt2->bindParam(':image', $image);
+      $stmt2->bindParam(':description', $description);
+      $stmt2->bindParam(':id', $id);
 
-      if ($stmt1->execute()) { ?>
+      if ($stmt2->execute()) { ?>
         <script type="text/javascript">
-          window.location.href = "facilities_view.php?msg=edited";
+          window.location.href = "blogView.php?msg=edited";
         </script>
       <?php   }
     } else { ?>
 
-      <script type="text/javascript">
-        window.location.href = "facilities_add.php?msg=imgerror";
-      </script>
+      <!-- <script type="text/javascript">
+        window.location.href = "blogAdd.php?msg=imgerror";
+      </script> -->
 <?php
     }
   }
@@ -199,44 +202,62 @@ if ($_GET['id'] != '') {
 ?>
 
 <script type="text/javascript">
-  $(function() {
-    // Setup form validation on the #register-form element
-    $("#edit_details").validate({
-      ignore: [],
-      debug: false,
-      // Specify the validation rules
-      rules: {
-        title: {
-          required: true
-        },
-        description: {
-          required: true
-        }
-      },
+  // $(function() {
+  //   // Setup form validation on the #register-form element
+  //   $("#edit_details").validate({
+  //     ignore: [],
+  //     debug: false,
+  //     // Specify the validation rules
+  //     rules: {
+  //       title: {
+  //         required: true
+  //       },
+  //       description: {
+  //         required: true
+  //       },
+  //       keywords: {
+  //         required: true
+  //       },
+  //       image: {
+  //         required: true
+  //       },
+  //       content: {
+  //         required: true
+  //       },
+  //     },
 
-      // Specify the validation error messages
-      messages: {
-        title: {
-          required: 'Field should not be empty'
-        },
-        description: {
-          required: 'Field should not be empty'
-        }
-      },
-    });
-  });
+  //     // Specify the validation error messages
+  //     messages: {
+  //       title: {
+  //         required: 'Field should not be empty'
+  //       },
+  //       description: {
+  //         required: 'Field should not be empty'
+  //       },
+  //       keywords: {
+  //         required: 'Field should not be empty'
+  //       },
+  //       image: {
+  //         required: 'Field should not be empty'
+  //       }
+  //       content: {
+  //         required: 'Field should not be empty'
+  //       },
+  //     },
+  //   });
+  // });
 
-  function Checkfiles() {
-    var fup = document.getElementById('file_type');
-    var fileName = fup.value;
-    var ext = fileName.substring(fileName.lastIndexOf('.') + 1);
-    if (ext == "jpeg" || ext == "jpg" || ext == "png") {
-      return true;
-    } else {
-      alert("Upload jpeg,jpg,png Files only");
-      document.getElementById('file_type').value = "";
-      fup.focus();
-      return false;
-    }
-  }
+  // function Checkfiles() {
+  //   var fup = document.getElementById('file_type');
+  //   var fileName = fup.value;
+  //   var ext = fileName.substring(fileName.lastIndexOf('.') + 1);
+  //   if (ext == "jpeg" || ext == "jpg" || ext == "png") {
+  //     return true;
+  //   } else {
+  //     alert("Upload jpeg,jpg,png Files only");
+  //     document.getElementById('file_type').value = "";
+  //     fup.focus();
+  //     return false;
+  //   }
+  // }
 </script>

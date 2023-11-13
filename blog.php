@@ -21,29 +21,25 @@ $header_images_row = $header_images->fetch(PDO::FETCH_ASSOC); ?>
 
         <div class="carousel-outer">
             <div class="row">
-                <?php $facilities1 = $conn->query("SELECT * FROM  facilities");
-                while ($facilities = $facilities1->fetch(PDO::FETCH_ASSOC)) { ?>
+                <?php $blog = $conn->query("SELECT * FROM  blog");
+                while ($blogDetail = $blog->fetch(PDO::FETCH_ASSOC)) { ?>
                     <!-- service Block -->
                     <div class="service-block-two col-lg-4 col-md-6 col-sm-12">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><img src="uploads/<?php echo $facilities['image']; ?>" alt=""></figure>
+                                <figure class="image"><img src="uploads/blog/<?php echo $blogDetail['image']; ?>" alt=""></figure>
                             </div>
                             <div class="lower-content">
                                 <div class="title-box">
-                                    <h4><?php echo $facilities['title']; ?></h4>
+                                    <h4><a href="blog-detail.php?key=<?php echo $blogDetail['key_url'] ?>"><?php echo $blogDetail['title']; ?></a></h4>
                                 </div>
-                                <div class="text"><?php echo $facilities['description']; ?></div>
+                                <div class="text"><?php echo $blogDetail['description']; ?></div>
                                 <span class="icon-right flaticon-heart-2"></span>
                             </div>
                         </div>
                     </div>
 
                 <?php } ?>
-
-
-
-
 
             </div>
         </div>

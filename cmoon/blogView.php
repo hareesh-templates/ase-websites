@@ -66,12 +66,12 @@
                   <td><?php echo $no; ?></td>
                   <td><?php echo $result['title']; ?></td>
                   <td>
-                    <a data-fancybox="gallery" href="../uploads/<?php echo $result['image']; ?>">
-                      <img width="200" height="200" src="../uploads/<?php echo $result['image']; ?>" class="img-fluid">
+                    <a data-fancybox="gallery" href="../uploads/blog/<?php echo $result['image']; ?>">
+                      <img width="200" height="200" src="../uploads/blog/<?php echo $result['image']; ?>" class="img-fluid">
                     </a>
                   </td>
                   <td>
-                    <a href="blogAdd.php?id=<?php echo $result['id'] ?>" class="btn btn-outline-success">Edit </a>
+                    <!-- <a href="blogAdd.php?id=<?php echo $result['id'] ?>" class="btn btn-outline-success">Edit </a> -->
                     <a onclick="ConfirmDelete(<?php echo $result['id']; ?>)" href="JavaScript:Void(0);" class="btn btn-outline-danger">Delete</a>
                   </td>
                 </tr>
