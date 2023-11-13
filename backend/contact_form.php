@@ -8,8 +8,8 @@ if (isset($_POST['submit'])) {
 	$message = $_POST['message'];
 
 	$to = 'info@eswarigroup.com';
-	$subject = 'Eswari Group - New Form submission';
-	$body = "Eswari Group - New Form submission\n
+	$subject = 'Eswari Group - New Contact Form Submission';
+	$body = "Eswari Group - New Contact Form Submission\n
 	           Name: $name\n
 	           Mobile: $mobile\n
 	           Email Id: $email\n
